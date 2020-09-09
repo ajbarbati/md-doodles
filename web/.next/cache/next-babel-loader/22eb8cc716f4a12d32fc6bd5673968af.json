@@ -1,0 +1,1 @@
+{"ast":null,"code":"import Pups from '../../components/index-sections/pups';","map":{"version":3,"sources":["C:/Users/ajb02/OneDrive/Documents/Work/md-doodles/web/pages/pups/puppies.js"],"names":["Pups"],"mappings":"AACA,OAAOA,IAAP,MAAiB,sCAAjB","sourcesContent":["\r\nimport Pups from '../../components/index-sections/pups'\r\n\r\n"]},"metadata":{},"sourceType":"module"}
