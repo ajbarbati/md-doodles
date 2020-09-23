@@ -7,7 +7,7 @@ export default function Testimonials() {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "testimonial"] {
+        `*[_type == "testimonial" && featured == true] {
             title,
             featured,
             body{
@@ -31,20 +31,20 @@ export default function Testimonials() {
 
   console.log(setAll)
   return (
-    <div className="testimonials">
-      <h2>Featured Testimonials</h2>
-      <div>
+    <div className="testimonial">
+      <h2>What our customers are saying!</h2>
+      <div className="testimonialsWrap" >
+        <div className="testimonials">
         {allData &&
           allData.map((data, index) => (
-            <span key={index}>
-              <img width="50px" src={data.image.asset.url} alt="Family of Testimonial" />
-              <span>
-                <h2>{data.title}</h2>
-                <h3>{data.featured == true ? "Featured" : null}</h3>
-                <p>{data.body.en.children.text}</p>
-              </span>
-            </span>
+            <div key={index} className="testCard">
+              <img  src={data.image.asset.url} alt="Family of Testimonial" />
+              
+              <h3>{data.title}</h3>
+              <p>{data.body.en.children.text}</p>
+            </div>
           ))}
+        </div>
       </div>
     </div>
   )

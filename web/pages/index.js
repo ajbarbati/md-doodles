@@ -1,8 +1,8 @@
 import Header from '../components/header'
 import Footer from '../components/footer'
-import Pups from '../components/index-sections/pups'
+import FeaturedPups from '../components/index-sections/featuredPups'
 import Testimonials from '../components/index-sections/testimonial'
-import Litter from '../components/index-sections/litter'
+import Links from '../components/index-sections/links'
 import Faq from '../components/index-sections/faq'
 import About from '../components/index-sections/about'
 import Process from '../components/index-sections/proccessInfo'
@@ -18,8 +18,8 @@ const Index = () => {
             <Header/>
             <Landing/>
             <Testimonials />
-            <Pups />
-            <Litter />
+            <FeaturedPups />
+            <Links />
             <Process />
             <About />
             <Faq/>

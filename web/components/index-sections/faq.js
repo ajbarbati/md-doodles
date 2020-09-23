@@ -18,9 +18,9 @@ export default function Testimonials() {
 
   console.log(setAll)
   return (
-    <div className="testimonials">
+    <div className="faq">
       <h2>Featured FAQ</h2>
-      <div>
+      <div className="faqs">
         {allData &&
           allData.map((data, index) => (
             <span key={index}>

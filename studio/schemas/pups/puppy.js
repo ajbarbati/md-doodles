@@ -14,9 +14,12 @@ export default {
         name: "image",
         type: "image",
         title: "Image of Puppy",
-        options: {
-          hotspot: true // <-- Defaults to false
-        },
+        validation: Rule => Rule.required()
+      },
+      {
+        title: 'ON for Available | OFF for Sold',
+        name: 'available',
+        type: 'boolean',
         validation: Rule => Rule.required()
       },
       {
