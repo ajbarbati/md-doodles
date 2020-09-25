@@ -46,7 +46,6 @@ export default function Pups() {
                 <h3>{data.sex}</h3>
                 <h4>{data.breedSelect}</h4>
                 <h5>{data.breedType}</h5>
-                <p>{data.body.en.children.text}</p>
                 <p>{data.litter}</p>
               </span>
             </span>

@@ -7,7 +7,7 @@ export default function Testimonials() {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "testimonial" && featured == true] {
+        `*[_type == "testimonial" && featured == true][0..2] {
             title,
             featured,
             body{

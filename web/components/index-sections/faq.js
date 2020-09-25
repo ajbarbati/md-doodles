@@ -19,16 +19,14 @@ export default function Testimonials() {
   console.log(setAll)
   return (
     <div className="faq">
-      <h2>Featured FAQ</h2>
+      <h2>Still got questions?</h2>
       <div className="faqs">
         {allData &&
           allData.map((data, index) => (
-            <span key={index}>
-              <span>
-                <h2>{data.title}</h2>
-                <p>{data.description}</p>
-              </span>
-            </span>
+            <div key={index} className="faqWrap">=
+              <h2>{data.title}</h2>
+              <p>{data.description}</p>=
+            </div>
           ))}
       </div>
     </div>

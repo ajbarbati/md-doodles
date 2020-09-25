@@ -7,7 +7,7 @@ export default function FeaturedPups() {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "puppy" && featured == true] {
+        `*[_type == "puppy" && featured == true][0..2] {
             title,
             sex,
             breedSelect,

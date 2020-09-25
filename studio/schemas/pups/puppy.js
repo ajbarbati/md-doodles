@@ -75,11 +75,6 @@ export default {
         title: 'Litter',
         type: 'reference',
         to: {type: 'litter'},
-      },
-      {
-        name: 'body',
-        title: 'Puppy Description',
-        type: 'localeBlockContent'
       }, 
       {
         name: 'slug',

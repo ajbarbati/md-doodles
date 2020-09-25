@@ -39,24 +39,34 @@ export default function About() {
   console.log(setAll)
   return (
     <div className="about">
-      <h2>About</h2>
-      <div>
         {allData &&
           allData.map((data, index) => (
-            <span key={index}>
-              
-              <span>
-                <h2>{data.title}</h2>
-                <img width="50px" src={data.image.asset.url} alt="Image of Tracie" />
-                <p>{data.body.en.children.text}</p>
-              </span>
-              <div>
-                <h2>{data.title2}</h2>
-                <p>{data.body2.en.children.text}</p>
+            <div key={index} className="aboutWrap">
+              <div className="row1">
+                <div>
+                    <img src={data.image.asset.url} alt="Image of Tracie" />
+                  <div>
+                    <h3>{data.title}</h3>
+                    <p>{data.body.en.children.text}</p>
+                  </div>
+                </div>
+                <div>
+                  <h2>Who we are!</h2>
+                </div>
               </div>
-            </span>
+              <div className="row2">
+                <div>
+                  </div>
+                <div>
+                  <div>
+                    <h3>{data.title2}</h3>
+                    <p>{data.body2.en.children.text}</p>
+                  </div>
+                  <img src={data.image.asset.url} alt="Image of Tracie" />
+                </div>
+              </div>
+            </div>
           ))}
-      </div>
     </div>
   )
 }
