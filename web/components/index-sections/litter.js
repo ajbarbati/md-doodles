@@ -14,6 +14,7 @@ export default function Litter() {
             "dad": dad->title,
             "dadImage": dad->image,
             featured,
+            breedSelect,
             image{
               asset->{
                 _id,
@@ -37,20 +38,26 @@ export default function Litter() {
   return (
     <div className="litters">
       <h2>Featured Litters</h2>
-      <div>
+      <div className="litterGrid">
         {allData &&
           allData.map((data, index) => (
-            <span key={index}>
-              <img width="100px" src={data.image.asset.url} alt="Family of Testimonial" />
-              <span>
-                <h2>{data.title}</h2>
-                <h3>{data.featured == true ? "Featured" : null}</h3>
-                
-                <div><img src={urlFor(data.momImage).width(300).url()} alt="Mother of Litter"/><p>Mother: {data.mom}</p></div>
-                <div><img src={urlFor(data.dadImage).width(300).url()} alt="Mother of Litter"/><p>Father: {data.dad}</p></div>
+            <div className="litterWrap" key={index}>
+              <div className="Mother">
+                <img src={urlFor(data.momImage).width(300).url()} alt="Mother of Litter"/>
+                <p>Mother: {data.mom}</p>
+                <h4 className="breed">{data.breedSelect}</h4>
+              </div>
+              <div className="litterInfo">
+                <img width="100px" src={data.image.asset.url} alt="A litter of puppies" />
+                <h2>{data.title}</h2>               
                 <p>{data.body.en.children.text}</p>
-              </span>
-            </span>
+              </div>
+              <div  className="Father">
+                <img src={urlFor(data.dadImage).width(300).url()} alt="Mother of Litter"/>
+                <p>Father: {data.dad}</p>
+                <h4 className="breed">{data.breedSelect}</h4>
+              </div> 
+            </div>
           ))}
       </div>
     </div>

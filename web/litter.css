@@ -1,0 +1,32 @@
+.litters {
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+    .litterGrid {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 75%;
+        place-items: center;
+    }
+
+        .litterWrap {
+            display: grid;
+            grid-template-columns: 1fr 30% 1fr;
+            grid-template-rows: 1fr;
+            place-items: center;
+            width: 100%;
+        }
+
+            .Mother img, .Father img {
+                width:  17em;
+                height: 17em;
+                object-fit: cover;
+            }
+
+            .litterInfo img {
+                object-fit: cover;
+                width: 15em;
+                height: 10em
+            }

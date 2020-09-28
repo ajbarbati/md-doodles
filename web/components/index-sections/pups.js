@@ -12,6 +12,7 @@ export default function Pups() {
             sex,
             breedSelect,
             breedType,
+            available,
             "litter": litter->title,
             body{
               en[0]{
@@ -34,21 +35,21 @@ export default function Pups() {
 
   console.log(setAll)
   return (
-    <div className="pups">
-      <h2>Featured Pups</h2>
-      <div>
+    <div className="featuredPups">
+      <h2>Pups</h2>
+      <div className="featuredPupCards">
         {allData &&
           allData.map((data, index) => (
-            <span key={index}>
-              <img src={data.image.asset._ref} alt="" />
-              <span>
-                <h2>{data.title}</h2>
-                <h3>{data.sex}</h3>
-                <h4>{data.breedSelect}</h4>
-                <h5>{data.breedType}</h5>
-                <p>{data.litter}</p>
-              </span>
-            </span>
+            <div className="pupCard" key={index}>
+              <img src={data.image.asset.url} alt="" />
+              <div>
+                <h3 className="name">{data.title}</h3>       
+                <h3 className="available" style={{color: data.available == !true ? 'green' : "red"}}>{data.available == !true ? "AVAILABLE" : "SOLD"}</h3>
+                <h4 className="sex">{data.sex}</h4>
+                <h4 className="breed">{data.breedSelect}</h4>
+                <h5 className="breedType">{data.breedType}</h5>
+              </div>
+            </div>
           ))}
       </div>
     </div>
