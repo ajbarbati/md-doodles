@@ -11,10 +11,13 @@ export default function Litter() {
             title,
             "mom": mom->title,
             "momImage": mom->image,
+            "momBreed": mom->breedSelect,
             "dad": dad->title,
             "dadImage": dad->image,
+            "dadBreed": dad->breedSelect,
             featured,
-            breedSelect,
+            dob,
+            dateA,
             image{
               asset->{
                 _id,
@@ -45,17 +48,19 @@ export default function Litter() {
               <div className="Mother">
                 <img src={urlFor(data.momImage).width(300).url()} alt="Mother of Litter"/>
                 <p>Mother: {data.mom}</p>
-                <h4 className="breed">{data.breedSelect}</h4>
+                <h4 className="breed">{data.momBreed}</h4>
               </div>
               <div className="litterInfo">
                 <img width="100px" src={data.image.asset.url} alt="A litter of puppies" />
                 <h2>{data.title}</h2>               
+                <h4>Date of Birth: {data.dob}</h4>        
+                <h4>Date Available: {data.dateA}</h4>               
                 <p>{data.body.en.children.text}</p>
               </div>
               <div  className="Father">
                 <img src={urlFor(data.dadImage).width(300).url()} alt="Mother of Litter"/>
                 <p>Father: {data.dad}</p>
-                <h4 className="breed">{data.breedSelect}</h4>
+                <h4 className="breed">{data.dadBreed}</h4>
               </div> 
             </div>
           ))}

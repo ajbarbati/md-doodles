@@ -1,0 +1,1 @@
+{"ast":null,"code":"import sanityClient from './client';\nimport imageUrlBuilder from '@sanity/image-url';\nvar builder = imageUrlBuilder(sanityClient);\nexport default function urlFor(source) {\n  return builder.image(source);\n}","map":null,"metadata":{},"sourceType":"module"}

@@ -1,4 +1,4 @@
-import { useEffect, useState, Component } from "react"
+import { useEffect, useState} from "react"
 import sanityClient from "../../client.js"
 
 export default function About() {
@@ -35,8 +35,6 @@ export default function About() {
       .then((data) => setAll(data))
       .catch(console.error)
   }, [])
-
-  console.log(setAll)
   return (
     <div className="about">
         {allData &&

@@ -1,5 +1,6 @@
 import { useEffect, useState, Component } from "react"
 import sanityClient from "../../client.js"
+import Routes from '../../components/routes'
 
 export default function Pups() {
   const [allData, setAll] = useState(null)
@@ -37,6 +38,7 @@ export default function Pups() {
   return (
     <div className="featuredPups">
       <h2>Pups</h2>
+      <Routes/>
       <div className="featuredPupCards">
         {allData &&
           allData.map((data, index) => (

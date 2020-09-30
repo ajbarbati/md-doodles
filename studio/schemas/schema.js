@@ -5,21 +5,18 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // We import object and document schemas
 import blockContent from './blockContent'
-import category from './category'
-
 import localeString from './locale/String'
 import localeText from './locale/Text'
 import localeBlockContent from './locale/BlockContent'
+
 import puppy from './pups/puppy'
-import sex from './pups/sex'
-import breed from './pups/breed'
-import breedType from './pups/breedType'
 import litter from './pups/litter'
 import mom from './pups/mom'
 import dad from './pups/dad'
 import testimonial from './testimonial'
 import faq from './faq'
 import about from './aboutSection'
+import info from './infoPage'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -37,10 +34,7 @@ export default createSchema({
     dad,
     faq,
     about,
-    category,
-    breed,
-    sex,
-    breedType,
+    info,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,

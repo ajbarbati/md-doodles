@@ -130,12 +130,11 @@ header {
             display: grid;
             grid-template-rows: 1fr 25%;
             align-items: center;
-            margin: 3em;
+            margin: 1em;
             height: 100%;
         }
 
             .pupCard img {
-                /* float: left; */
                 width:  17em;
                 height: 17em;
                 object-fit: cover;
@@ -166,6 +165,7 @@ header {
             }
 
             .breedType {
+                text-align: right;
                 grid-column: 4;
             }
 

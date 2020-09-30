@@ -9,8 +9,14 @@ export default {
         type: 'string'
       },
       {
-        name: 'date',
+        name: 'dob',
         title: 'Born On',
+        type: 'date',
+        validation: Rule => Rule.required()
+      },
+      {
+        name: 'dateA',
+        title: 'Date Available',
         type: 'date',
         validation: Rule => Rule.required()
       },
