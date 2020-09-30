@@ -11,6 +11,19 @@
 // const client = require('./client.js')
 
 module.exports = {
+  async headers() {
+    return [
+      {
+        source: '/*',
+        headers: [
+          {
+            key: 'Access-Control-Allow-Origin',
+            value: '*',
+          },
+        ],
+      },
+    ]
+  },
 //   exportPathMap: async function (defaultPathMap) {
 //     const paths = await client
 //       .fetch('*[_type == "post" && defined(slug)].slug.current')
@@ -29,3 +42,5 @@ module.exports = {
 //   },
   experimental: {css: true}
 }
+
+  
