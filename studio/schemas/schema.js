@@ -17,6 +17,7 @@ import testimonial from './testimonial'
 import faq from './faq'
 import about from './aboutSection'
 import info from './infoPage'
+import images from './images'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -35,6 +36,7 @@ export default createSchema({
     faq,
     about,
     info,
+    images,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,

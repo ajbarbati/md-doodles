@@ -22,6 +22,7 @@ header {
         width: 100%;
         justify-content: space-around;
         align-items: center;
+        background-color: #fff;
     }
     
     .routes a {
@@ -40,7 +41,7 @@ header {
 
 .landing {
     height: 85vh;
-    background: url("https://via.placeholder.com/500?text=Puppy+IMG+maybeSlider");
+    background: url("/static/img/golden.jpg");
     display: grid;
     place-items: end start;
 }

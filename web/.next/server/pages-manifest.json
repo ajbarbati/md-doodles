@@ -1,18 +1,6 @@
 {
   "/_app": "pages/_app.js",
-  "/": "pages/index.html",
-  "/info": "pages/info.html",
-  "/litters": "pages/litters.html",
-  "/puppies": "pages/puppies.html",
-  "/pups/berne-doodle": "pages/pups/berne-doodle.html",
-  "/pups/female": "pages/pups/female.html",
-  "/pups/golden-doodle": "pages/pups/golden-doodle.html",
-  "/pups/male": "pages/pups/male.html",
-  "/pups/mini": "pages/pups/mini.html",
-  "/pups/sheepa-doodle": "pages/pups/sheepa-doodle.html",
-  "/pups/standard": "pages/pups/standard.html",
-  "/routes": "pages/routes.html",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/404": "pages/404.html"
+  "/": "pages/index.js"
 }
